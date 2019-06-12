@@ -1,5 +1,6 @@
 class Schedule < ApplicationRecord
-	# has_many :interns
+  include ActiveModel::Model
+
 	has_many :appointments
 
 	attr_accessor :sch_name

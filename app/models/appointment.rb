@@ -1,7 +1,8 @@
 class Appointment < ApplicationRecord
-  belongs_to :schedule
-
+	include ActiveModel::Model
 	attr_accessor :title, :start_time, :end_time
+
+  belongs_to :schedule
 
 	def initialize(attributes = {})
 		@title = attributes[:title]
