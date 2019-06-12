@@ -15,9 +15,4 @@ class Appointment < ApplicationRecord
 
 	grill = Appointment.new(title: "grilling", start_time: 12, end_time: 23, schedule: "Summer")
 
-	# NOTES - DELETE
-	# person = Person.new(name: 'bob', age: '18')
-	# person.name # => "bob"
-	# person.age  # => "18"
-
 end
