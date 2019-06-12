@@ -11,7 +11,9 @@ class Appointment < ApplicationRecord
 		@schedule = attributes[:schedule]
 	end
 
+	garden = Appointment.new(title: "gardening", start_time: 1, end_time: 7, schedule: "Spring")
 
+	grill = Appointment.new(title: "grilling", start_time: 12, end_time: 23, schedule: "Summer")
 
 	# NOTES - DELETE
 	# person = Person.new(name: 'bob', age: '18')
