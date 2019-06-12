@@ -13,9 +13,35 @@ module Api
 				render json: @schedules, status: :ok
 			end
 
+			def new
+
+			end
+
 			def create
 
 			end
+
+
+			def create
+				@contact = Contact.new(params[:contact])
+
+				if @contact.save
+					render json: @contact, status: :created
+				else
+					render json: @contact.errors, status: :unprocessable_entity
+				end
+			end
+
+			# def create
+			# @contact = Contact.new(params[:contact])
+
+			# 	if @contact.save
+			# 		render json: @contact, status: :created
+			# 	else
+			# 		render json: @contact.errors, status: :unprocessable_entity
+			# 	end
+			# end
+
 
 			def destroy
 				@schedule.destroy

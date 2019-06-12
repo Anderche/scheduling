@@ -17,8 +17,18 @@ module Api
 				render json: @schedules, status: :ok
 			end
 
-			def create
+			def new
 
+			end			
+
+			def create
+				@appointment = Appointment.new(params[:title, :start_time, :end_time])
+
+				if @appointment.save
+					render json: @appointment, status: :created
+				else
+					render json: @appointment.errors, status: :unprocessable_entity
+				end
 			end
 
 			def destroy
