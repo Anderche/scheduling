@@ -2,6 +2,9 @@ module Api
 	module v1
 		class SchedulesController < ApplicationController
 			
+			def initialize(name)
+			end
+
 			def index
 				
 			end

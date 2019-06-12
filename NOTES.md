@@ -1,7 +1,13 @@
-rails g model Appointment title:string body:text start_time:integer end_time:integer schedule:references
+rails g model Appointment 
+
+title:string 
+start_time:integer 
+end_time:integer 
+schedule:references
 
 
-rails g model Schedule name:string 
+rails g model Schedule
+name:string
 
 ##################
 
